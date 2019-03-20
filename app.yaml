@@ -1,0 +1,15 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /.*
+  script: main.app
+
+#[START env]
+env_variables:
+    PUBSUB_TOPIC: og-konnekt
+    # This token is used to verify that requests originate from your
+    # application. It can be any sufficiently random string.
+    #PUBSUB_VERIFICATION_TOKEN: 1234abc
+#[END env]
